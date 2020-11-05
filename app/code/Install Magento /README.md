@@ -57,12 +57,12 @@
   ## 2. PHP ON/OFF
  ## включить пхп 7.4
  
- `` #!/bin/bash
-  sudo a2dismod php7.2
-  sudo a2dismod php7.4
-  sudo a2enmod php7.4
-  sudo service apache2 restart
-  sudo update-alternatives --set php /usr/bin/php7.4``
+    `` #!/bin/bash
+    sudo a2dismod php7.2
+    sudo a2dismod php7.4
+    sudo a2enmod php7.4
+    sudo service apache2 restart
+    sudo update-alternatives --set php /usr/bin/php7.4``
 
   ## 3. ELASTICSEARCH
   
@@ -70,11 +70,14 @@
   * Install
   * Install JDK 
 
-  ```(sudo apt search jdk)  sudo apt install openjdk-8-jdk-headless```
+    ```(sudo apt search jdk) $ sudo apt install openjdk-8-jdk-headless```
   
   * Стартуем Эластик 
-  ``sudo service elasticsearch start``
-  * Проверяем ``curl http://127.0.0.1:9200``
+  
+    ``sudo service elasticsearch start``
+  * Проверяем 
+  
+    ``curl http://127.0.0.1:9200``
   
   ## 4. COMPOSER STEPS
  ### community
@@ -97,5 +100,7 @@
  ## 7. Завешение (копмиляция кода и статики)
  
 ``php bin/magento setup:upgrade``
+
 ``php bin/magento setup:di:compile``
+
 ``php bin/magento setup:static-content:deploy``
