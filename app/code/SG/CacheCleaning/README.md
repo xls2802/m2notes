@@ -28,6 +28,18 @@ bin/nagemto cache:status
 bin/nagemto cache:disable full_page
 ```
 
+### ИНТАЛЛЯЦИЯ    NODEJS (Необходимо для последующей настройки если еще не установлено)
+```
+sudo apt remove nodejs
+sudo apt purge nodejs
+
+sudo apt autoremove
+curl -sL https://deb.nodesource.com/setup_10.x -o nodesource_setup.sh
+sudo bash nodesource_setup.sh
+sudo apt install nodejs
+```
+
+
 ## 2. АВТОМАТИЗАЦИЯ при помощи ``cache-clean.js``
 
 * INSTALLING
